@@ -5,12 +5,14 @@ on:
  pull_request:
    branches: [ suji_bazeltest ]
 jobs:
- build:
+ commit:
    runs-on: windows-latest
    steps:
      # Step 1: Checkout code
      - name: Checkout repository
        uses: actions/checkout@v4
+jobs:
+ build:     
      # Step 2: Add GHS compiler to PATH
      - name: Set up GHS compiler path
        shell: cmd
