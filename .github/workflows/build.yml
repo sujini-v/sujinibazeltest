@@ -5,13 +5,23 @@ on:
  pull_request:
    branches: [ suji_bazeltest ]
 jobs:
-   # Stage 1: Commit df
-  commit:
-    name: Commit Stage
+   # Stage 1: Checkout
+  Checkout:
+    name: Checkout Stage
     runs-on: windows-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4
+  compiler check:
+    name: Set up GHS compiler path
+    runs-on: windows-latest
+    steps:
+     - name: Set up GHS compiler path
+       shell: cmd
+       run: |
+         echo Adding GHS compiler to PATH...
+         set PATH=D:\ghs\comp_202014;%PATH% 
+         echo PATH after: %PATH%
   build:
     name: build Stage
     runs-on: windows-latest
