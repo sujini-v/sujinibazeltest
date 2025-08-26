@@ -1,9 +1,9 @@
 name: Build
 on:
  push:
-   branches: [ sujinibazeltes ]
+   branches: [ sujinibazeltest ]
  pull_request:
-   branches: [ sujinibazeltes ]
+   branches: [ sujinibazeltest ]
 jobs:
    # Stage 1: Commit df
   commit:
