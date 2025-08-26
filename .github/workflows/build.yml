@@ -1,9 +1,9 @@
 name: Build
 on:
  push:
-   branches: [ main ]
+   branches: [ suji_bazeltest ]
  pull_request:
-   branches: [ main ]
+   branches: [ suji_bazeltest ]
 jobs:
  build:
    runs-on: windows-latest
