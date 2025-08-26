@@ -13,6 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
   compilercheck:
+    # Step 2: Add GHS compiler to PATH
     name: Set up GHS compiler path
     runs-on: windows-latest
     steps:
@@ -23,19 +24,10 @@ jobs:
          set PATH=D:\ghs\comp_202014;%PATH% 
          echo PATH after: %PATH%
   build:
+    # Step 3: Build with Bazel
     name: build Stage
     runs-on: windows-latest
     steps:
-     # Step 1: Checkout code
-     #- name: Checkout repository
-     #  uses: actions/checkout@v4
-     # Step 2: Add GHS compiler to PATH
-     - name: Set up GHS compiler path
-       shell: cmd
-       run: |
-         echo Adding GHS compiler to PATH...
-         set PATH=D:\ghs\comp_202014;%PATH% 
-         echo PATH after: %PATH%
      # Step 3: Verify compiler is accessible
      #- name: Check GHS compiler
      #  shell: cmd
