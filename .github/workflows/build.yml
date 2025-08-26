@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-  compiler check:
+  compilercheck:
     name: Set up GHS compiler path
     runs-on: windows-latest
     steps:
