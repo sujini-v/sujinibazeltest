@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
   compilercheck:
-    # Step 2: Add GHS compiler to PATH
+    # Step 2: Add GHS compiler to PATHs
     name: Set up GHS compiler path
     runs-on: windows-latest
     steps:
