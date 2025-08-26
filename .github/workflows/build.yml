@@ -1,17 +1,25 @@
 name: Build
 on:
  push:
-   branches: [ suji_bazeltest ]
+   branches: [ sujinibazeltes ]
  pull_request:
-   branches: [ suji_bazeltest ]
+   branches: [ sujinibazeltes ]
 jobs:
- commit:
-   runs-on: windows-latest
-   steps:
+jobs:
+   # Stage 1: Commit
+  commit:
+    name: Commit Stage
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 
+  build:
+    name: build Stage
+    runs-on: windows-latest
+    steps:
      # Step 1: Checkout code
-     - name: Checkout repository
-       uses: actions/checkout@v4
- build:     
+     #- name: Checkout repository
+     #  uses: actions/checkout@v4
      # Step 2: Add GHS compiler to PATH
      - name: Set up GHS compiler path
        shell: cmd
