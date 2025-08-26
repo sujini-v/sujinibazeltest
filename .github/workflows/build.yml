@@ -1,0 +1,32 @@
+name: Build
+on:
+ push:
+   branches: [ main ]
+ pull_request:
+   branches: [ main ]
+jobs:
+ build:
+   runs-on: windows-latest
+   steps:
+     # Step 1: Checkout code
+     - name: Checkout repository
+       uses: actions/checkout@v4
+     # Step 2: Add GHS compiler to PATH
+     - name: Set up GHS compiler path
+       shell: cmd
+       run: |
+         echo Adding GHS compiler to PATH...
+         set PATH=D:\ghs\comp_202014;%PATH% 
+         echo PATH after: %PATH%
+     # Step 3: Verify compiler is accessible
+     #- name: Check GHS compiler
+     #  shell: cmd
+     #  run: |
+     #    where ccthumb.exe
+     #    ccthumb.exe -version || echo "GHS compiler not found!"
+     # Step 4: Run Bazel build
+     - name: Build with Bazel
+       shell: cmd
+       run: |
+         echo Starting Bazel build...
+         bazel build //:main_binary.elf
