@@ -1,0 +1,10 @@
+build --compiler=ccthumb
+build --action_env=CC=D:/ghs/comp_202014/ccthumb.exe
+build --action_env=CXX=D:/ghs/comp_202014/ccthumb.exe
+build --linkopt=-static
+#build --action_env=CC=D:/ghs/comp_202014/ccthumb.exe -rcsD
+#build --linkopt=-Wl,-Tdummy.ld
+#build --mcpu=arm
+#build --linkopt=["-Wl,-Tdummy.ld"],  # specify the linker script
+#build:ccthumb rcsD lib.a obj.o
+

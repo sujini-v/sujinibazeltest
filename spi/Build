@@ -1,0 +1,9 @@
+cc_library(
+    name = "spi_lib",
+    srcs = ["spi.c"],
+    hdrs = ["spi.h"],
+    includes = ["."],
+    visibility = ["//visibility:public"],
+    linkstatic = 1,
+    alwayslink = 1,
+)
