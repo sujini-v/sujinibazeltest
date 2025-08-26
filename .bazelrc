@@ -1,10 +1,96 @@
-build --compiler=ccthumb
+# Compiler and environment setup
+build --compiler=ghs
+build --cpu=arm
 build --action_env=CC=D:/ghs/comp_202014/ccthumb.exe
 build --action_env=CXX=D:/ghs/comp_202014/ccthumb.exe
-build --linkopt=-static
-#build --action_env=CC=D:/ghs/comp_202014/ccthumb.exe -rcsD
-#build --linkopt=-Wl,-Tdummy.ld
-#build --mcpu=arm
-#build --linkopt=["-Wl,-Tdummy.ld"],  # specify the linker script
-#build:ccthumb rcsD lib.a obj.o
 
+# General linking
+#build --linkopt=-static
+
+# -------------------------------
+# Compiler Flags (CFLAGS)
+# -------------------------------
+#build --copt=-c
+#build --copt=-Ospace
+#build --copt=-g
+# # build --copt=-cpu=arm
+# # build --copt=-prepare_dispose
+# build --copt=-sda=all
+# build --copt=--prototype_warnings
+# build --copt=-Wundef
+# build --copt=-no_callt
+# build --copt=-reserve_r2
+# build --copt=-inline_prologue
+# build --copt=--short_enum
+# build --copt=-thumb
+# build --copt=-dual_debug
+# build --copt=-nostartfile
+# build --copt=-DS32G2XX
+# build --copt=-DETH_ASR_440_USED
+# build --copt=-DSOAD_ASR_431_USED
+# build --copt=-DSCHM_ASR_431_USED
+# build --copt=-DTCPIP_ASR_431_USED
+# build --copt=-DETHIF_ASR_431_USED
+# build --copt=-DETHSM_ASR_431_USED
+# build --copt=-DMCAL_431_SIGNATURE_COMPATIBILITY
+# build --copt=-DDEM_ASR_431_USED
+# build --copt=-align8
+# build --copt=-no_misalign_pack
+# build --copt=-Wall
+# build --copt=-G
+# build --copt=-glimits
+# build --copt=-dwarf2
+# build --copt=-memory
+# build --copt=-C99
+# build --copt=--ghstd=last
+# build --copt=-Osize
+# build --copt=--gnu_asm
+# build --copt=-Wimplicit-int
+# build --copt=-Wshadow
+# build --copt=-Wtrigraphs
+# build --copt=--unsigned_chars
+# build --copt=--unsigned_fields
+# build --copt=-nostartfiles
+# build --copt=--no_commons
+# build --copt=--no_exceptions
+# build --copt=--no_slash_comment
+# build --copt=--prototype_errors
+# build --copt=--incorrect_pragma_warnings
+# build --copt=-DGHS
+# build --copt=-DD_CACHE_ENABLE
+# build --copt=-DENABLE_FPU
+
+# build --copt=-IProject_Settings/Startup_Code
+# build --copt=-Iinclude
+
+# # -------------------------------
+# # Assembler Flags (AFLAGS)
+# # -------------------------------
+# build --conlyopt=-cpu=arm
+# build --conlyopt=-preprocess_assembly_files
+# build --conlyopt=-list
+# build --conlyopt=-c
+# build --conlyopt=-memory
+
+# # -------------------------------
+# # Linker Flags (LFLAGS)
+# # -------------------------------
+# build --linkopt=-entry=_start
+# build --linkopt=-map
+# build --linkopt=-delete
+# build --linkopt=-mthumb
+# build --linkopt=-DS32G2XX
+# build --linkopt=-nostartfiles
+# #build --linkopt=-e
+# #build --linkopt=-T
+# #build --linkopt=-keepmap
+# #build --linkopt=-Mn
+# build --linkopt=-ignore_debug_references
+# build --linkopt=-Llibrary_path
+# build --linkopt=-larch
+# build --linkopt=-lstartup
+# build --linkopt=-memory
+# #build --linkopt=-map=output.map
+# build --linkopt=-L$(CLIB)
+# build --linkopt=-cpu=cortexm7
+# #build --linkopt=-entry=Reset_Handler

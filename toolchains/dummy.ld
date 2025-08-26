@@ -10,13 +10,19 @@ MEMORY {
 }
 SECTIONS {
     .text : {
-        *(.text)
+        "Main.o"(.text)
+        "spi.o"(.text)
+        "can.o"(.text)
     } > rom
     .data : {
-        *(.data)
+        "Main.o"(.data)
+        "spi.o"(.data)
+        "can.o"(.data)
     } > ram
     .bss : {
-        *(.bss)
+        "Main.o"(.bss)
+        "spi.o"(.bss)
+        "can.o"(.bss)
         *(COMMON)
     } > ram
     .stack : {

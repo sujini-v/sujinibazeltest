@@ -1,9 +1,5 @@
-cc_library(
-    name = "can_lib",
-    srcs = ["can.c"],
-    hdrs = ["can.h"],
-    includes = ["."],
-    visibility = ["//visibility:public"],
-    linkstatic = 1,
-    alwayslink = 1,
+filegroup(
+    name        = "can",
+    srcs        = ["can.c", "can.h"],
+    visibility  = ["//visibility:public"],
 )

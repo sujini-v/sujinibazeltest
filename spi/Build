@@ -1,9 +1,5 @@
-cc_library(
-    name = "spi_lib",
-    srcs = ["spi.c"],
-    hdrs = ["spi.h"],
-    includes = ["."],
-    visibility = ["//visibility:public"],
-    linkstatic = 1,
-    alwayslink = 1,
+filegroup(
+    name        = "spi",
+    srcs        = ["spi.c","spi.h"],
+    visibility  = ["//visibility:public"],
 )
