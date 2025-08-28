@@ -1,7 +1,7 @@
 name: Self-hosted Bazel + GHS Pipeline
  
 on:
-  workflow_dispatch:   # Run manually from GitHub UI
+  workflow_dispatch:   #  Run manually from GitHub UI
  
 jobs:
   build:
