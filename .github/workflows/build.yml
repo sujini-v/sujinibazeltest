@@ -34,7 +34,7 @@ jobs:
         shell: cmd
         run: |
           where ccthumb.exe
-          ccthumb.exe -version || echo "GHS compiler not found!"
+          ccthumb.exe -version || echo GHS compiler not found!
   build:
     # Step 3: Build with Bazel
     name: build Stage
@@ -45,4 +45,5 @@ jobs:
        run: |
          echo Starting Bazel build...
          bazel build //:main_binary.elf
-         echo main_binary.elf generated...
+         where main_binary.elf
+         echo main_binary.elf generated || echo main_binary.elf not generated!
