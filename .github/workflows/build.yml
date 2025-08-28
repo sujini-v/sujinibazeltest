@@ -8,7 +8,7 @@ jobs:
    # Stage 1: Checkout
   Checkout:
     name: Checkout Stage
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
