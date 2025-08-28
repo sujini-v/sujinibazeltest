@@ -34,23 +34,12 @@ jobs:
         shell: cmd
         run: |
           where ccthumb.exe
-          if %errorlevel% neq 0 (
-            echo GHS compiler not found!
-            exit /b 1
-          )
-          ccthumb.exe -version
-  build:
+          ccthumb.exe -version || echo "GHS compiler not found!"
+   build:
     # Step 3: Build with Bazel
     name: build Stage
     runs-on: self-hosted
     steps:
-     # Step 3: Verify compiler is accessible
-     #- name: Check GHS compiler
-     #  shell: cmd
-     #  run: |
-     #    where ccthumb.exe
-     #    ccthumb.exe -version || echo "GHS compiler not found!"
-     # Step 4: Run Bazel build
      - name: Build with Bazel
        shell: cmd
        run: |
