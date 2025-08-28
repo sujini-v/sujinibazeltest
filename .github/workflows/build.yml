@@ -27,8 +27,8 @@ jobs:
          echo PATH after: %PATH%
   compilerexecheck:
     # Stage 3: Verify Compiler
-    name: Set up GHS compiler path
-    runs-on: windows-latest
+    name: Verify GHS compiler ccthumb.exe
+    runs-on: self-hosted
     steps:
       - name: Verify GHS compiler ccthumb.exe found or not
         shell: cmd
@@ -38,7 +38,7 @@ jobs:
   build:
     # Step 3: Build with Bazel
     name: build Stage
-    runs-on: windows-latest
+    runs-on: self-hosted
     steps:
      - name: Build with Bazel
        shell: cmd
