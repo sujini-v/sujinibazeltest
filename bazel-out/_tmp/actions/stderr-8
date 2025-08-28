@@ -1,0 +1,27 @@
+ccthumb: Warning: Unknown option "-frandom-seed=bazel-out/arm-fastbuild/bin/_objs/main_binary.elf/Main.o" ignored.  Did you mean "--aslr_seed=bazel-out/arm-fastbuild/bin/_objs/main_binary.elf/Main.o"?
+ccthumb: Warning: Unknown option "-iquote" passed to linker
+ccthumb: Warning: Unknown option "-iquote" passed to linker
+ccthumb: Warning: Unknown option "-iquote" passed to linker
+ccthumb: Warning: Unknown option "-iquote" passed to linker
+ccthumb: Warning: file '.' ignored with these options
+ccthumb: Warning: file 'bazel-out/arm-fastbuild/bin' ignored with these options
+ccthumb: Warning: file 'external/bazel_tools' ignored with these options
+ccthumb: Warning: file 'bazel-out/arm-fastbuild/bin/external/bazel_tools' ignored with these options
+"Main.c", line 6: warning #837-D: omission of explicit type is nonstandard
+          ("int" assumed)
+  static can;
+         ^
+
+"Main.c", line 11: warning #1547-D: call is made to a non-prototyped function
+      spi_function();
+      ^
+
+"Main.c", line 12: warning #1547-D: call is made to a non-prototyped function
+      can_function();
+      ^
+
+"Main.c", line 6: warning #177-D: variable "can" was declared but never
+          referenced
+  static can;
+         ^
+

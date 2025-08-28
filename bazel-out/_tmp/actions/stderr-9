@@ -1,0 +1,14 @@
+ccthumb: Warning: Unknown option "-frandom-seed=bazel-out/arm-fastbuild/bin/_objs/main_binary.elf/can.o" ignored.  Did you mean "--aslr_seed=bazel-out/arm-fastbuild/bin/_objs/main_binary.elf/can.o"?
+ccthumb: Warning: Unknown option "-iquote" passed to linker
+ccthumb: Warning: Unknown option "-iquote" passed to linker
+ccthumb: Warning: Unknown option "-iquote" passed to linker
+ccthumb: Warning: Unknown option "-iquote" passed to linker
+ccthumb: Warning: file '.' ignored with these options
+ccthumb: Warning: file 'bazel-out/arm-fastbuild/bin' ignored with these options
+ccthumb: Warning: file 'external/bazel_tools' ignored with these options
+ccthumb: Warning: file 'bazel-out/arm-fastbuild/bin/external/bazel_tools' ignored with these options
+"can/can.c", line 6: warning #177-D: variable "num" was declared but never
+          referenced
+      int num;
+          ^
+

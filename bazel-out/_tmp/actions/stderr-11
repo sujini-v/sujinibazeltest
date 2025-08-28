@@ -1,0 +1,13 @@
+[elxr] (warning #275) unrecognized option: -S
+[elxr] (warning #283) section .rodata from Main.o isn't included by the section map;
+  appending after last section.
+  add to section map or use -append to append without warning
+[elxr] (warning #283) section .syscall from libsys.a(ind_dots.o) isn't included by the section map;
+  appending after last section.
+  add to section map or use -append to append without warning
+[elxr] (warning #283) section .interfunc from libarch.a(indarch8.o) isn't included by the section map;
+  appending after last section.
+  add to section map or use -append to append without warning
+[elxr] (warning #283) section .secinfo from <section info> isn't included by the section map;
+  appending after last section.
+  add to section map or use -append to append without warning

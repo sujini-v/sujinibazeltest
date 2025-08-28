@@ -1,0 +1,5 @@
+filegroup(
+    name        = "can",
+    srcs        = ["can.c", "can.h"],
+    visibility  = ["//visibility:public"],
+)

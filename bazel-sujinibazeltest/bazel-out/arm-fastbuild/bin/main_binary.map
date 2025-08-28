@@ -1,0 +1,244 @@
+Host OS:	Windows
+ELXR: Copyright (C) 1983-2020 Green Hills Software.  All Rights Reserved.
+Release: Compiler v2020.1.4
+Build Directory: [Directory] KVOTHE-1:C:/autoval2/compiler/release-branch-2020-1-comp/build/v2020.1-2020-04-26/win64-comp
+Revision: [VCInfo] http://toolsvc/branches/release-branch-2020-1-comp/src@671852 (built by auto-compiler)
+Revision Date: Mon Apr 27 08:58:56 2020
+
+Release Date: Mon Apr 27 05:30:05 2020
+
+
+
+
+Load Map Thu Aug 28 16:46:30 2025
+Image Summary
+
+  Section              Base      Size(hex)    Size(dec)  SecOffs
+  .text                08000000  00001458         5208   0000120
+  .data                20000000  00000004            4   0001578
+  .tls.cond.data       20000004  00000000            0   0000000
+  .bss                 20000004  000001f8          504   0000000
+  .tls.cond.bss        200001fc  00000000            0   0000000
+  .stack               200001fc  00000000            0   0000000
+  .secinfo             200001fc  00000018           24   000157c
+  .rodata              20000214  0000005d           93   0001594
+  .syscall             20000272  00000004            4   00015f2
+  .interfunc           20000276  0000000a           10   00015f6
+  .linfix              00000000  00000050           80   0001600
+  .gstackfix           00000000  00000030           48   0001650
+
+Load Map Thu Aug 28 16:46:30 2025
+Module Summary
+
+  Origin+Size    Section          Module
+08000000+000088  .text            crt0.o
+08000088+00001c  .text            Main.o
+20000214+000020  .rodata          Main.o
+080000a4+000010  .text            spi.o
+20000004+000001  .bss             spi.o
+20000234+00001b  .rodata          spi.o
+080000b4+000010  .text            can.o
+2000024f+00001b  .rodata          can.o
+080000c4+000018  .text            libansi.a(ccprintf.o)
+080000dc+00002c  .text            libansi.a(ccexit.o)
+08000108+0000e8  .text            libansi.a(ccvprntf.o)
+080001f0+000048  .text            libansi.a(ccbufsiz.o)
+20000008+000050  .bss             libansi.a(ccbufsiz.o)
+08000238+00001e  .text            libansi.a(ccputcu.o)
+08000258+00009c  .text            libansi.a(ccflsbuf.o)
+080002f4+0000d8  .text            libansi.a(ccflock.o)
+080003cc+0000b0  .text            libansi.a(ccfflush.o)
+0800047c+000678  .text            libansi.a(ccvsprnt.o)
+2000026a+000007  .rodata          libansi.a(ccvsprnt.o)
+08000af4+00017c  .text            libansi.a(ccllout.o)
+08000c70+00001e  .text            libansi.a(ccstrnlen.o)
+08000c8e+000010  .text            libansi.a(ccstrlen.o)
+08000c9e+000024  .text            libwc_u16.a(ccstorewc.o)
+08000cc2+00003a  .text            libwc_u16.a(ccwctomb.o)
+08000cfc+0002a8  .text            libstartup.a(ind_crt0.o)
+08000fa4+000036  .text            libstartup.a(ind_mset.o)
+08000fda+000144  .text            libstartup.a(ind_mcpy.o)
+0800111e+000006  .text            libsys.a(ind_lock.o)
+20000000+000001  .data            libsys.a(ind_lock.o)
+08001124+000024  .text            libsys.a(ind_thrd.o)
+20000058+000004  .bss             libsys.a(ind_thrd.o)
+08001148+000078  .text            libsys.a(ind_iob.o)
+2000005c+000194  .bss             libsys.a(ind_iob.o)
+20000002+000002  .data            libsys.a(ind_iob.o)
+080011c0+000064  .text            libsys.a(ind_exit.o)
+200001f0+000004  .bss             libsys.a(ind_exit.o)
+200001f4+000004  .bss             libsys.a(ind_errn.o)
+08001224+000014  .text            libsys.a(ind_errn.o)
+20000272+000004  .syscall         libsys.a(ind_dots.o)
+08001238+000048  .text            libsys.a(ind_call.o)
+08001280+0000ac  .text            libsys.a(ind_io.o)
+200001f8+000004  .bss             libsys.a(ind_crt1.o)
+0800132c+0000c0  .text            libsys.a(ind_crt1.o)
+080013ec+000022  .text            libarch.a(indarchj.o)
+08001410+000048  .text            libarch.a(indarchi.o)
+20000276+000004  .interfunc       libarch.a(indarch8.o)
+2000027a+000004  .interfunc       libarch.a(indarch5.o)
+2000027e+000002  .interfunc       libarch.a(indarch3.o)
+00000000+000050  .linfix          <Linker supplemental debug info>
+00000000+000030  .gstackfix       <Linker supplemental gstack info>
+200001fc+000018  .secinfo         <section info>
+
+Load Map Thu Aug 28 16:46:30 2025
+Global Symbols (sorted alphabetically)
+
+ .interfunc       20000276+000000 .interfunc..trg.2Fthumb.2Fobjs.2Flibs.2Flibarch.2Findarch8.
+ .text            080011c0+000034 _Exit
+                  00000000+000000 __atexit_cleanup_func
+                  00000000+000000 __cpp_exception_cleanup
+                  00000000+000000 __cpp_exception_init
+                  00000000+000000 __division_by_zero
+ .syscall         20000272+000004 __dotsyscall
+ .data            20000002+000002 __gh_FOPEN_MAX
+ .text            08000206+000012 __gh_bufclose
+ .bss             20000008+000050 __gh_buffersizes
+ .text            08000218+000016 __gh_bufinit
+ .text            080001f0+000016 __gh_bufsize
+ .text            08000330+000042 __gh_check_lock_file
+ .text            0800122a+000004 __gh_errno_ptr
+                  00000000+000000 __gh_file_reservations
+                  00000000+000000 __gh_float_printf
+ .text            0800122e+000006 __gh_get_errno
+ .text            080004c8+000032 __gh_hexout
+ .text            0800116a+000046 __gh_iob_init
+ .text            08001122+000002 __gh_lock_init
+ .text            08000bba+000026 __gh_long_long_printf
+ .text            080004fa+000036 __gh_octhexout
+ .text            08000530+000022 __gh_outchars
+ .text            08000552+00000a __gh_outspaces
+ .text            08001224+000006 __gh_set_errno
+ .text            08000c9e+00000a __gh_store_wc
+ .text            0800055c+000218 __gh_strout
+ .text            08000be0+000084 __gh_uns_long_long_printf
+ .text            08000ab8+000010 __gh_vsprintf
+ .text            08000ca8+00001a __gh_wctomb
+ .text            0800047c+000020 __gh_xxdecout
+ .text            0800111e+000002 __ghsLock
+ .text            08000fa0+000004 __ghsTfar_1__0_.interfunc___ghsThumbBLR
+ .text            08000ae0+000004 __ghsTfar__0_.interfunc___ghsThumbBLR
+ .text            08001214+000010 __ghsTfar__0_.interfunc___ghsThumbBLR0
+ .text            08000ae4+000010 __ghsTfar__0_.interfunc___ghsThumbBLR6
+ .text            080001e0+000010 __ghsTfar__0_.interfunc___ghsThumbBLR7
+ .text            08000078+000010 __ghsTfar__0_.syscall___ghs_initial_dotsyscall
+ .interfunc       2000027e+000002 __ghsThumbBLR
+ .interfunc       2000027a+000002 __ghsThumbBLR0
+ .interfunc       2000027c+000002 __ghsThumbBLR1
+ .interfunc       20000276+000002 __ghsThumbBLR6
+ .interfunc       20000278+000002 __ghsThumbBLR7
+ .text            08001120+000002 __ghsUnlock
+ .text            08001124+00000c __ghs_GetThreadLocalStorageItem
+ .text            08001134+000002 __ghs_RestoreSignalContext
+ .text            08001130+000004 __ghs_SaveSignalContext
+ .text            080011f4+000016 __ghs_at_exit
+                  00000000+000000 __ghs_board_cache_sync
+                  00000000+000000 __ghs_board_devices_init
+                  00000000+000000 __ghs_board_memory_init
+                  00000000+000000 __ghs_checksum
+                  00000000+000000 __ghs_coverage_init
+                  00000000+000000 __ghs_cpp_exception_cleanup
+                  00000000+000000 __ghs_cpp_exception_init
+                  00000000+000000 __ghs_decompress
+ .text            08000048+000002 __ghs_enterblock_func
+ .text            08001140+000002 __ghs_flock_create
+ .text            08001142+000002 __ghs_flock_destroy
+ .text            08001136+000002 __ghs_flock_file
+ .text            080003a2+00001e __ghs_flock_in_use
+ .text            08001148+000018 __ghs_flock_ptr
+ .text            08001160+00000a __ghs_flock_word
+ .text            0800113a+000006 __ghs_ftrylock_file
+ .text            08001138+000002 __ghs_funlock_file
+ .text            080012d4+00000c __ghs_hostio_close
+ .text            080012c6+00000e __ghs_hostio_creat
+ .text            080012fc+000010 __ghs_hostio_fcntl
+ .text            080012e0+000010 __ghs_hostio_lseek
+ .text            080012a2+000024 __ghs_hostio_open
+ .text            08001290+000012 __ghs_hostio_read
+ .text            080012f0+00000c __ghs_hostio_unlink
+ .text            08001280+000010 __ghs_hostio_write
+ .text            08000cfc+000246 __ghs_ind_crt0
+ .text            0800132c+000096 __ghs_ind_crt1
+ .syscall         20000272+000004 __ghs_initial_dotsyscall
+                  00000002+000000 __ghs_log_fee_level
+                  00000000+000000 __ghs_malloc_init
+                  00000000+000000 __ghs_manprf_init
+ .text            08000774+000344 __ghs_printf_common
+                  00000000+000000 __ghs_rambootcodeend
+                  00000000+000000 __ghs_rambootcodestart
+                  00000000+000000 __ghs_rombootcodeend
+                  00000000+000000 __ghs_rombootcodestart
+                  00000000+000000 __ghs_set_stack_chk_guard
+ .data            20000000+000001 __ghs_single_threaded
+ .text            08000c8e+000010 __ghs_strlen
+ .text            08001238+00001e __ghs_syscall
+ .text            0800125c+000020 __ghs_syscall64
+ .text            08000cc2+000032 __ghs_u32tomb
+                  00000000+000000 __ghs_validate_ghtws
+ .text            08000108+0000c4 __ghs_vfprintf_with_rtch
+                  00000000+000000 __ghsbegin_fixaddr
+                  00000000+000000 __ghsbegin_fixtype
+                  00000000+000000 __ghsbegin_picbase
+                  00000000+000000 __ghsbegin_pidbase
+                  00000000+000000 __ghsbegin_robase
+ .secinfo         200001fc+000000 __ghsbegin_secinfo
+ .secinfo         20000214+000000 __ghsbinfo_aclear
+ .secinfo         20000214+000000 __ghsbinfo_acopy
+ .secinfo         200001fc+000018 __ghsbinfo_clear
+ .secinfo         20000214+000000 __ghsbinfo_comacopy
+ .secinfo         20000214+000000 __ghsbinfo_comcopy
+ .secinfo         20000214+000000 __ghsbinfo_comtcopy
+ .secinfo         20000214+000000 __ghsbinfo_copy
+ .secinfo         20000214+000000 __ghsbinfo_tcopy
+ .secinfo         20000214+000000 __ghseinfo_clear
+ .secinfo         20000214+000000 __ghseinfo_comcopy
+ .secinfo         20000214+000000 __ghseinfo_copy
+                  00000000+000000 __ghsend_fixaddr
+ .stack           200001fc+000000 __ghsend_stack
+                  00000000+000000 __ghssize_fixaddr
+ .text            080013ec+00000e __udiv10
+ .text            08001410+000038 __udiv_32_32
+ .text            080013fa+000014 __umod10
+ .text            08001448+00000c __umod_32_32
+                  00000000+000000 _cleanup
+ .text            080011c0+000034 _exit
+ .text            08000258+000094 _flsbuf
+ .bss             2000005c+000140 _iob
+ .bss             2000019c+000054 _iob_lock
+ .text            08000000+000008 _start
+ .text            08000008+000040 _start_T
+ .bss             20000004+000001 c
+ .text            080000b4+00000c can_function
+ .text            080012d4+00000c close
+ .text            080012c6+00000e creat
+ .rodata          20000230+000004 d
+ .bss             200001f8+000004 environ
+ .bss             200001f4+000004 errno
+ .text            080000dc+000022 exit
+ .text            080012fc+000010 fcntl
+ .text            080003cc+0000a6 fflush
+ .text            080002f4+000010 flockcreate
+ .text            08000304+000016 flockdestroy
+ .text            0800031a+000016 flockfile
+ .text            08000388+00001a ftrylockfile
+ .text            08000372+000016 funlockfile
+ .text            080012e0+000010 lseek
+ .text            08000088+000016 main
+ .text            08000fda+000144 memcpy
+ .text            08000fa4+000036 memset
+ .text            080012a2+000024 open
+ .text            080000c4+000014 printf
+ .text            08000238+00001e putc_unlocked
+ .text            08001290+000012 read
+ .text            080000a4+00000c spi_function
+ .text            08000c8e+000010 strlen
+ .text            08000c70+00001e strnlen
+ .text            080012f0+00000c unlink
+ .text            0800049c+00002c unsout..trg.2Fthumb.2Fobjs.2Flibs.2Flibansi.2Fccvsprnt.
+ .text            080001cc+00000a vfprintf
+ .text            08000cf4+000008 wctomb
+ .text            08001280+000010 write
+ .text            08000b0e+0000ac xdecout..trg.2Fthumb.2Fobjs.2Flibs.2Flibansi.2Fccllout.
+ .text            08000af4+00001a xxdecout..trg.2Fthumb.2Fobjs.2Flibs.2Flibansi.2Fccllout.
