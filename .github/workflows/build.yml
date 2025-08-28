@@ -2,9 +2,9 @@ name: localbuild Bazel GHS
  
 on:
  push:
-   branches: [ suji_bazeltest ]
+   branches: [ bazelselfhost ]
  pull_request:
-   branches: [ suji_bazeltest ]
+   branches: [ bazelselfhost ]
  
 jobs:
    # Stage 1: Checkout 
