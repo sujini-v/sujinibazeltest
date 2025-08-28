@@ -1,7 +1,10 @@
 name: Self-hosted Bazel + GHS Pipeline
  
 on:
-  workflow_dispatch:   #  Run manually from GitHub UI
+ push:
+   branches: [ suji_bazeltest ]
+ pull_request:
+   branches: [ suji_bazeltest ]
  
 jobs:
   build:
