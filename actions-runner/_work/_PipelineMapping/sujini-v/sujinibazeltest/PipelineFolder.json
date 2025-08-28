@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "sujini-v/sujinibazeltest",
+  "pipelineDirectory": "sujinibazeltest",
+  "workspaceDirectory": "sujinibazeltest\\sujinibazeltest",
+  "repositories": {
+    "sujini-v/sujinibazeltest": {
+      "repositoryPath": "sujinibazeltest\\sujinibazeltest",
+      "lastRunOn": "08/28/2025 16:45:45 +05:30"
+    }
+  },
+  "lastRunOn": "08/28/2025 16:45:58 +05:30"
+}
