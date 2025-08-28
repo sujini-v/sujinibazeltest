@@ -8,14 +8,14 @@ jobs:
    # Stage 1: Checkout
   Checkout:
     name: Checkout Stage
-    runs-on: windows-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
   compilerpathcheck:
     # Step 2: Add GHS compiler to PATH
     name: Set up GHS compiler path
-    runs-on: windows-latest
+    runs-on: self-hosted
     steps:
      - name: Set up environment variable
        uses: actions/setup-env@v1
@@ -30,7 +30,7 @@ jobs:
   compilerexecheck:
     # Stage 3: Verify Compiler
     name: Verify Compiler ccthumb.exe
-    runs-on: windows-latest
+    runs-on: self-hosted
     steps:
       - name: Verify GHS compiler ccthumb.exe found or not
         shell: cmd
@@ -45,7 +45,7 @@ jobs:
   build:
     # Step 3: Build with Bazel
     name: build Stage
-    runs-on: windows-latest
+    runs-on: self-hosted
     steps:
      # Step 3: Verify compiler is accessible
      #- name: Check GHS compiler
