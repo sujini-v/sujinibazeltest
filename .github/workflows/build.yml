@@ -7,7 +7,7 @@ on:
    branches: [ suji_bazeltest ]
  
 jobs:
-   # Stage 1: Checkout
+   # Stage 1: Checkout 
   Checkout:
     name: Checkout Stage
     runs-on: self-hosted
