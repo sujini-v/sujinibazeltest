@@ -1,44 +1,61 @@
-name: Self-hosted Bazel + GHS Pipeline
+name: localbuild Bazel GHS
  
 on:
- push:
-   branches: [ suji_bazeltest ]
- pull_request:
-   branches: [ suji_bazeltest ]
+  workflow_dispatch:   #  Run manually from GitHub UI
  
 jobs:
-  build:
-    runs-on: self-hosted   # Use your Windows self-hosted runner
- 
+   # Stage 1: Checkout
+  Checkout:
+    name: Checkout Stage
+    runs-on: self-hosted
     steps:
-      # Step 1: Checkout your repo
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
- 
-      # Step 2: Add GHS compiler to PATH
-      - name: Setup GHS compiler
+  compilerpathcheck:
+    # Step 2: Add GHS compiler to PATH
+    name: Set up GHS compiler path
+    runs-on: self-hosted
+    steps:
+     - name: Set up environment variable
+       uses: actions/setup-env@v1
+       with:
+         COMPILER_PATH: C:\local\ghs\comp_202014
+     - name: Set up GHS compiler path
+       shell: cmd
+       run: |
+         echo Adding GHS compiler to PATH...
+         set PATH=%COMPILER_PATH%;%PATH% 
+         echo PATH after: %PATH%  
+  compilerexecheck:
+    # Stage 3: Verify Compiler
+    name: Verify Compiler ccthumb.exe
+    runs-on: self-hosted
+    steps:
+      - name: Verify GHS compiler ccthumb.exe found or not
         shell: cmd
         run: |
-          echo Adding GHS compiler to PATH...
-          set PATH=D:\ghs\comp_202014;%PATH%
-          echo PATH is now: %PATH%
- 
-      # Step 3: Verify Bazel installation
-      - name: Check Bazel version
-        shell: cmd
-        run: |
-          bazel --version
- 
-      # Step 4: Run Bazel build with your GHS toolchain
-      - name: Bazel build
-        shell: cmd
-        run: |
-          echo Starting Bazel build with GHS toolchain...
-          bazel build //:hello --crosstool_top=//toolchain:ghs_cc_toolchain
- 
-      # Step 5: Upload ELF as artifact (optional but useful)
-      - name: Upload ELF artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ghs-build-output
-          path: bazel-bin/**/*.elf
+          where ccthumb.exe
+          if %errorlevel% neq 0 (
+            echo GHS compiler not found!
+            exit /b 1
+          )
+          ccthumb.exe -version
+          ccthumb.exe -version || echo "GHS compiler not found!"
+  build:
+    # Step 3: Build with Bazel
+    name: build Stage
+    runs-on: self-hosted
+    steps:
+     # Step 3: Verify compiler is accessible
+     #- name: Check GHS compiler
+     #  shell: cmd
+     #  run: |
+     #    where ccthumb.exe
+     #    ccthumb.exe -version || echo "GHS compiler not found!"
+     # Step 4: Run Bazel build
+     - name: Build with Bazel
+       shell: cmd
+       run: |
+         echo Starting Bazel build...
+         bazel build //:main_binary.elf
+         cmd /k
