@@ -32,6 +32,11 @@ jobs:
         shell: cmd
         run: |
           where ccthumb.exe
+          if %errorlevel% neq 0 (
+            echo GHS compiler not found!
+            exit /b 1
+          )
+          ccthumb.exe -version
           ccthumb.exe -version || echo "GHS compiler not found!"
   build:
     # Step 3: Build with Bazel
