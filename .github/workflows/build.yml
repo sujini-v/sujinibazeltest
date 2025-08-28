@@ -17,15 +17,19 @@ jobs:
     name: Set up GHS compiler path
     runs-on: windows-latest
     steps:
+     - name: Set up environment variable
+       uses: actions/setup-env@v1
+       with:
+         COMPILER_PATH: C:\local\ghs\comp_202014
      - name: Set up GHS compiler path
        shell: cmd
        run: |
          echo Adding GHS compiler to PATH...
-         set PATH=D:\ghs\comp_202014;%PATH% 
-         echo PATH after: %PATH%
+         set PATH=%COMPILER_PATH%;%PATH% 
+         echo PATH after: %PATH%  
   compilerexecheck:
     # Stage 3: Verify Compiler
-    name: Set up GHS compiler path
+    name: Verify Compiler ccthumb.exe
     runs-on: windows-latest
     steps:
       - name: Verify GHS compiler ccthumb.exe found or not
