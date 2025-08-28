@@ -23,8 +23,18 @@ jobs:
          echo Adding GHS compiler to PATH...
          set PATH=D:\ghs\comp_202014;%PATH% 
          echo PATH after: %PATH%
-  build:
-    # Step 3: Build with Bazel
+   Verify Compiler:    
+      # Stage 3: Verify Compiler
+    name: Set up GHS compiler path
+    runs-on: windows-latest
+    steps:
+      - name: Verify GHS compiler
+        shell: cmd
+        run: |
+          where ccthumb.exe
+          ccthumb.exe -version || echo "GHS compiler not found!"
+    build:
+    # Step 4: Build with Bazel
     name: build Stage
     runs-on: windows-latest
     steps:
