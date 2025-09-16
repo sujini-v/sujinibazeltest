@@ -5,7 +5,6 @@
 const float d=0;
 static can;
 
-
 int main(void)
 {
     printf("Hello From main Bazel_stack");

@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_common")
 load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl",
      "tool_path", "feature", "flag_group", "flag_set")
 load("@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl", "artifact_name_pattern")
- #register_toolchains("//toolchains:ghs_toolchain_entry")
+
 def _impl(ctx):
     return cc_common.create_cc_toolchain_config_info(
         ctx = ctx,
@@ -15,25 +15,17 @@ def _impl(ctx):
         abi_version = "unknown",
         abi_libc_version = "unknown",
         tool_paths = [
-            # tool_path(name = "gcc", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            # tool_path(name = "ld", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            # tool_path(name = "ar", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            # tool_path(name = "strip", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            # tool_path(name = "cpp", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            # tool_path(name = "nm", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            # tool_path(name = "objdump", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            tool_path(name = "gcc", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            tool_path(name = "ld", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            tool_path(name = "ar", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            tool_path(name = "strip", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            tool_path(name = "cpp", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            tool_path(name = "nm", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-            tool_path(name = "objdump", path = "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ccthumb"),
-
+            tool_path(name = "gcc", path = "D:/ghs/comp_202014/ccthumb"),
+            tool_path(name = "ld", path = "D:/ghs/comp_202014/ccthumb"),
+            tool_path(name = "ar", path = "D:/ghs/comp_202014/ccthumb"),
+            tool_path(name = "strip", path = "D:/ghs/comp_202014/ccthumb"),
+            tool_path(name = "cpp", path = "D:/ghs/comp_202014/ccthumb"),
+            tool_path(name = "nm", path = "D:/ghs/comp_202014/ccthumb"),
+            tool_path(name = "objdump", path = "D:/ghs/comp_202014/ccthumb"),
         ],
         cxx_builtin_include_directories = [
-            "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//include",
-            "https://github.com/sujini-v/sujinighscomplier/tree/GHSfloat/ghs/comp_202014//ansi",
+            "D:/ghs/comp_202014/include",
+            "D:/ghs/comp_202014/ansi",
         ],
     )
 
