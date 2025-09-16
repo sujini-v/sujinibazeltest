@@ -1,7 +1,8 @@
 exports_files(["dummy.ld"], visibility = ["//toolchains:__pkg__"])
 cc_binary(
     name = "main_binary.elf",
-    deps = ["@my_dependency//:my_lib"],
+    # deps = ["@my_dependency//:my_lib"],
+    deps = ["//:my_dep"],
     srcs = [
         "Main.c",
         "//spi:spi",
