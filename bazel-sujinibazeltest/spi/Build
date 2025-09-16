@@ -1,5 +1,0 @@
-filegroup(
-    name        = "spi",
-    srcs        = ["spi.c","spi.h"],
-    visibility  = ["//visibility:public"],
-)
