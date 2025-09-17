@@ -23,7 +23,7 @@ cc_binary(
 	deps = ["@my_dep//:my_lib"],
     srcs = [
         "Main.c",
-#        "//spi:spi",
+        "//spi:spi",
         "//can:can",
         ],
 
