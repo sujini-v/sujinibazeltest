@@ -1,13 +1,13 @@
-#filegroup(
-#    name = "can",
-#    srcs = ["can.c", "can.h"],
-#    visibility = ["//visibility:public"],
-#
-#)
+filegroup(
+   name = "my_lib",
+   srcs = ["can.c", "can.h"],
+   visibility = ["//visibility:public"],
 
-cc_library(
-    name = "my_lib",
-    srcs = ["can.c"],
-    hdrs = ["can.h"],
-    visibility = ["//visibility:public"],
 )
+
+# cc_library(
+#     name = "can",
+#     srcs = ["can.c"],
+#     hdrs = ["can.h"],
+#     visibility = ["//visibility:public"],
+# )
