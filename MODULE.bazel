@@ -8,7 +8,8 @@ module(
     name = "my_dep",
     version = "1.0.0",
 )
-bazel_dep(name = "my_dep", version = "1.0.0")
+
+#bazel_dep(name = "my_dep", version = "1.0.0") #The repo name 'my_dep' is already being used as the current module name at @@my_dep~override/
 
 bazel_dep(name = "rules_cc", version = "0.0.8")
 register_toolchains("//toolchains:ghs_toolchain_entry")
