@@ -10,4 +10,4 @@ module(
 )
 # bazel_dep(name = "my_dep", version = "1.0.0")
 
-register_toolchains("//toolchains:ghs_toolchain_entry") #need to delete and check
+#register_toolchains("//toolchains:ghs_toolchain_entry") #need to delete and check
