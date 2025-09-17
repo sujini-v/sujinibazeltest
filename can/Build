@@ -1,5 +1,5 @@
 filegroup(
-   name = "my_lib",
+   name = "can",
    srcs = ["can.c", "can.h"],
    visibility = ["//visibility:public"],
 
