@@ -5,3 +5,8 @@
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
 register_toolchains("//toolchains:ghs_toolchain_entry")
+
+module(
+    name = "my_dep",
+    version = "1.0.0",
+)
