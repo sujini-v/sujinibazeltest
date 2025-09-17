@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "9e5803484bfb85a346c97803d674341def20511362054aabacaf9803c57a9114",
+  "moduleFileHash": "7def9c8a6ac80f348a4b7d2dd90737c8924c6554f3a051b290819f262c0caeb0",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -17,14 +17,12 @@
   },
   "moduleDepGraph": {
     "<root>": {
-      "name": "",
-      "version": "",
+      "name": "my_dep",
+      "version": "1.0.0",
       "key": "<root>",
-      "repoName": "",
+      "repoName": "my_dep",
       "executionPlatformsToRegister": [],
-      "toolchainsToRegister": [
-        "//toolchains:ghs_toolchain_entry"
-      ],
+      "toolchainsToRegister": [],
       "extensionUsages": [],
       "deps": {
         "bazel_tools": "bazel_tools@_",
