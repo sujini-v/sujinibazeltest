@@ -1,0 +1,1 @@
+register_toolchains("//toolchains:ghs_toolchain_entry")
