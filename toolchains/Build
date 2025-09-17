@@ -17,7 +17,12 @@ toolchain(
     visibility = ["//visibility:public"],
 )
 
-ghs_toolchain_config(name = "ghs_toolchain_config")
+ghs_toolchain_config(
+    name = "ghs_toolchain_config",
+    features = [],
+    action_configs = [],
+    toolchain_identifier = "ghs",
+)
 
 cc_toolchain(
     name = "ghs_toolchain",
