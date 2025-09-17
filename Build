@@ -1,12 +1,22 @@
 exports_files(["dummy.ld"], visibility = ["//toolchains:__pkg__"])
+#cc_binary(
+#    name = "main_binary.elf",
+#    #deps = ["@my_dep//:spi"],
+#    srcs = [
+#        "Main.c",
+#        "//spi:spi",
+#        "//can:can",
+#        ],
+#    linkopts=["-T","dummy.ld"],
+#    visibility = ["//visibility:public"],
+#)
 cc_binary(
     name = "main_binary.elf",
-    #deps = ["@my_dep//:spi"],
-    srcs = [
-        "Main.c",
+    srcs = ["Main.c"],
+    deps = [
         "//spi:spi",
         "//can:can",
-        ],
-    linkopts=["-T","dummy.ld"],
+    ],
+    linkopts = ["-T", "dummy.ld"],
     visibility = ["//visibility:public"],
 )
