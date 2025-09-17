@@ -9,4 +9,4 @@ module(
     version = "1.0.0",
 )
 
-#register_toolchains("//toolchains:ghs_toolchain_entry")
+register_toolchains("//toolchains:ghs_toolchain_entry")
